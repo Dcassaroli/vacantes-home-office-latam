@@ -1,0 +1,51 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a> › <span>{{ titulo_pagina }}</span>
+  </nav>
+
+  <h1 style="margin-bottom: 8px;">{{ titulo_pagina }}</h1>
+  <p style="color: var(--muted); margin-bottom: 20px;">{{ subtitulo_pagina }}</p>
+
+  <div class="cat-chips">
+    <a href="/empleos/" class="cat-chip">Todas las vacantes</a>
+    {% for slug, nombre in categorias_map.items() %}
+    <a href="/categoria/{{ slug }}/" class="cat-chip">{{ nombre }}</a>
+    {% endfor %}
+  </div>
+
+  {% if vacantes %}
+  <div class="job-list">
+    {% for v in vacantes %}
+    <article class="job-card {% if v.destacada %}featured{% endif %}">
+      <div class="badges">
+        {% if v.verificada %}
+        <span class="badge badge-verified">✔ Oferta verificada</span>
+        {% else %}
+        <span class="badge badge-pending">⏳ En verificación</span>
+        {% endif %}
+        <span class="badge badge-cat">{{ v.tipo_contratacion }}</span>
+      </div>
+      <h2 class="job-title"><a href="/empleos/{{ v.slug }}/">{{ v.titulo }}</a></h2>
+      <p class="job-company">{{ v.empresa }}</p>
+      <div class="job-meta">
+        <span>🌎 {{ v.paises | join(', ') }}</span>
+        <span>🗣️ {{ v.idioma }}</span>
+        <span>💰 {{ v.salario if v.salario else 'Según perfil' }}</span>
+        <span>📅 {{ v.fecha_publicacion }}</span>
+      </div>
+      <p class="job-summary">{{ v.resumen }}</p>
+      <div class="job-actions">
+        <a href="/empleos/{{ v.slug }}/" class="btn btn-primary">Ver detalles y postularme</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="content-card">
+    <p>Por el momento no hay vacantes activas en esta categoría. Vuelve pronto o explora <a href="/empleos/">todas las vacantes disponibles</a>.</p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

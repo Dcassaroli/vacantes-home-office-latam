@@ -1,0 +1,15 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a> › <span>{{ titulo }}</span>
+  </nav>
+
+  <article class="content-card prose">
+    <h1>{{ titulo }}</h1>
+    <div style="margin-top: 16px;">
+      {{ contenido_html | safe }}
+    </div>
+  </article>
+</div>
+{% endblock %}

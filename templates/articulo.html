@@ -1,0 +1,26 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a> › <a href="/blog/">Blog</a> › <span>{{ art.titulo }}</span>
+  </nav>
+
+  <article class="content-card prose">
+    <div class="badges">
+      <span class="badge badge-cat">{{ art.categoria }}</span>
+      <span class="badge badge-cat">📅 {{ art.fecha_publicacion }}</span>
+      <span class="badge badge-cat">⏱ Lectura de {{ art.lectura }}</span>
+    </div>
+    <h1>{{ art.titulo }}</h1>
+    <div style="margin-top: 18px;">
+      {{ art.contenido_html | safe }}
+    </div>
+  </article>
+
+  <aside class="promo-box">
+    <h3>¿Buscando tu próximo empleo remoto?</h3>
+    <p>Explora las vacantes actualizadas para México y toda Latinoamérica.</p>
+    <a href="/empleos/" class="btn btn-primary">Ver vacantes disponibles</a>
+  </aside>
+</div>
+{% endblock %}

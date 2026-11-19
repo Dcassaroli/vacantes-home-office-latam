@@ -1,0 +1,26 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a> › <span>Blog</span>
+  </nav>
+
+  <h1 style="margin-bottom: 8px;">Blog y Guías de Trabajo Remoto</h1>
+  <p style="color: var(--muted); margin-bottom: 24px;">Consejos prácticos para conseguir empleo home office desde México y Latinoamérica, mejorar tu CV y evitar estafas.</p>
+
+  <div class="job-list">
+    {% for art in articulos %}
+    <article class="job-card">
+      <div class="badges">
+        <span class="badge badge-cat">{{ art.categoria }}</span>
+        <span class="badge badge-cat">📅 {{ art.fecha_publicacion }}</span>
+        <span class="badge badge-cat">⏱ {{ art.lectura }}</span>
+      </div>
+      <h2 class="job-title"><a href="/blog/{{ art.slug }}/">{{ art.titulo }}</a></h2>
+      <p class="job-summary">{{ art.descripcion }}</p>
+      <a href="/blog/{{ art.slug }}/" class="btn btn-primary">Leer artículo</a>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

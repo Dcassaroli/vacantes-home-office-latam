@@ -1,0 +1,119 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <h1>Empleos Remotos y Home Office Reales para LATAM</h1>
+    <p>Encuentra vacantes verificables para trabajar desde casa en México y toda Latinoamérica: sin experiencia, solo en español, bilingües y freelance.</p>
+    <div class="hero-stats">
+      <span class="hero-pill">🌎 100% Remoto en LATAM</span>
+      <span class="hero-pill">✅ Ofertas verificables</span>
+      <span class="hero-pill">🆓 Postulación gratuita</span>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="filters-box" aria-label="Buscador de vacantes">
+    <div class="filters-grid">
+      <input type="search" id="filter-search" class="filter-input" placeholder="Buscar puesto, empresa o palabra clave...">
+      <select id="filter-category" class="filter-select" aria-label="Categoría">
+        <option value="">Todas las categorías</option>
+        {% for slug, nombre in categorias_map.items() %}
+        <option value="{{ slug }}">{{ nombre }}</option>
+        {% endfor %}
+      </select>
+      <select id="filter-language" class="filter-select" aria-label="Idioma">
+        <option value="">Cualquier idioma</option>
+        <option value="espanol">Solo español / Nativo</option>
+        <option value="ingles">Bilingüe / Inglés</option>
+      </select>
+      <select id="filter-experience" class="filter-select" aria-label="Experiencia">
+        <option value="">Cualquier experiencia</option>
+        <option value="sin experiencia">Sin experiencia</option>
+        <option value="experiencia">Con experiencia</option>
+      </select>
+      <select id="filter-country" class="filter-select" aria-label="País">
+        <option value="">Toda LATAM</option>
+        <option value="mexico">México</option>
+        <option value="colombia">Colombia</option>
+        <option value="argentina">Argentina</option>
+        <option value="chile">Chile</option>
+        <option value="peru">Perú</option>
+      </select>
+    </div>
+    <div class="filter-meta">
+      <span id="results-count">{{ vacantes|length }} {{ 'vacante disponible' if vacantes|length == 1 else 'vacantes disponibles' }}</span>
+      <button type="button" id="filter-reset" class="btn-reset">Limpiar filtros</button>
+    </div>
+  </section>
+
+  <div class="cat-chips">
+    {% for slug, nombre in categorias_map.items() %}
+    <a href="/categoria/{{ slug }}/" class="cat-chip">{{ nombre }}</a>
+    {% endfor %}
+  </div>
+
+  <h2 class="section-title">Últimas vacantes publicadas</h2>
+  <div class="job-list">
+    {% for v in vacantes %}
+    <article class="job-card {% if v.destacada %}featured{% endif %}"
+      data-search="{{ v.titulo }} {{ v.empresa }} {{ v.resumen }} {{ v.idioma }}"
+      data-categorias="{{ v.categorias | join(' ') }}"
+      data-idioma="{{ v.idioma }}"
+      data-experiencia="{{ v.experiencia }}"
+      data-paises="{{ v.paises | join(' ') }}">
+      <div class="badges">
+        {% if v.verificada %}
+        <span class="badge badge-verified">✔ Oferta verificada</span>
+        {% else %}
+        <span class="badge badge-pending">⏳ En verificación</span>
+        {% endif %}
+        {% if v.destacada %}
+        <span class="badge badge-featured">★ Destacada</span>
+        {% endif %}
+        <span class="badge badge-cat">{{ v.tipo_contratacion }}</span>
+      </div>
+      <h3 class="job-title"><a href="/empleos/{{ v.slug }}/">{{ v.titulo }}</a></h3>
+      <p class="job-company">{{ v.empresa }}</p>
+      <div class="job-meta">
+        <span>🌎 {{ v.paises | join(', ') }}</span>
+        <span>🗣️ {{ v.idioma }}</span>
+        <span>💰 {{ v.salario if v.salario else 'Según perfil / No especificado' }}</span>
+        <span>📅 {{ v.fecha_publicacion }}</span>
+      </div>
+      <p class="job-summary">{{ v.resumen }}</p>
+      <div class="job-actions">
+        <a href="/empleos/{{ v.slug }}/" class="btn btn-primary">Ver detalles y postularme</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div id="empty-state" class="empty-state">
+    <p>No encontramos vacantes con esos filtros. Intenta limpiar los filtros o explorar otra categoría.</p>
+  </div>
+
+  <aside class="promo-box">
+    <h3>¿Tu currículum pasa los filtros automáticos (ATS)?</h3>
+    <p>Muchas empresas remotas descartan CVs antes de leerlos por errores de formato. Revisa nuestra guía gratuita o consigue una plantilla lista para usar.</p>
+    <a href="/blog/como-hacer-curriculum-formato-ats-trabajo-remoto/" class="btn btn-accent">Leer guía de CV ATS</a>
+  </aside>
+
+  {% if articulos %}
+  <h2 class="section-title">Guías recientes para trabajar desde casa</h2>
+  <div class="job-list">
+    {% for art in articulos[:3] %}
+    <article class="job-card">
+      <div class="badges">
+        <span class="badge badge-cat">{{ art.categoria }}</span>
+        <span class="badge badge-cat">⏱ {{ art.lectura }}</span>
+      </div>
+      <h3 class="job-title"><a href="/blog/{{ art.slug }}/">{{ art.titulo }}</a></h3>
+      <p class="job-summary">{{ art.descripcion }}</p>
+      <a href="/blog/{{ art.slug }}/">Leer artículo completo →</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

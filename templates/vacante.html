@@ -1,0 +1,91 @@
+﻿{% extends "base.html" %}
+{% block extra_head %}
+{% if job_schema %}
+<script type="application/ld+json">
+{{ job_schema | safe }}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a> › <a href="/empleos/">Empleos</a> › <span>{{ v.titulo }}</span>
+  </nav>
+
+  <article class="content-card prose">
+    <div class="badges">
+      {% if v.verificada %}
+      <span class="badge badge-verified">✔ Oferta verificada</span>
+      {% else %}
+      <span class="badge badge-pending">⏳ Pendiente de confirmación</span>
+      {% endif %}
+      {% if v.destacada %}
+      <span class="badge badge-featured">★ Destacada</span>
+      {% endif %}
+    </div>
+
+    <h1>{{ v.titulo }}</h1>
+    <p class="job-company" style="font-size: 1.05rem; margin-top: 4px;">{{ v.empresa }}</p>
+
+    <div class="detail-grid">
+      <div class="detail-item"><strong>Países permitidos</strong>{{ v.paises | join(', ') }}</div>
+      <div class="detail-item"><strong>Modalidad</strong>{{ v.modalidad }}</div>
+      <div class="detail-item"><strong>Idioma requerido</strong>{{ v.idioma }}</div>
+      <div class="detail-item"><strong>Experiencia</strong>{{ v.experiencia }}</div>
+      <div class="detail-item"><strong>Salario</strong>{{ v.salario if v.salario else 'No especificado por la empresa' }}</div>
+      <div class="detail-item"><strong>Horario</strong>{{ v.horario }}</div>
+      <div class="detail-item"><strong>Tipo de contratación</strong>{{ v.tipo_contratacion }}</div>
+      <div class="detail-item"><strong>Fecha de publicación</strong>{{ v.fecha_publicacion }}{% if v.fecha_limite %} (Límite: {{ v.fecha_limite }}){% endif %}</div>
+    </div>
+
+    <h2>Descripción del puesto</h2>
+    <p>{{ v.resumen }}</p>
+
+    <h2>Funciones principales</h2>
+    <ul>
+      {% for item in v.funciones %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Requisitos</h2>
+    <ul>
+      {% for item in v.requisitos %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Beneficios</h2>
+    <ul>
+      {% for item in v.beneficios %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <div style="margin: 28px 0 12px;">
+      <a href="{{ v.enlace_aplicacion }}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 24px;">Postularme directamente en el sitio oficial ↗</a>
+    </div>
+    <p style="font-size: 0.85rem; color: #64748b;">Aviso de seguridad: Nunca pagues dinero ni envíes datos bancarios para aplicar a un empleo. Si detectas un enlace roto o sospechoso, <a href="/contacto/">repórtalo aquí</a>.</p>
+  </article>
+
+  <aside class="promo-box">
+    <h3>Mejora tus posibilidades antes de postularte</h3>
+    <p>Aprende cómo estructurar tu currículum para pasar filtros automáticos y evitar estafas laborales en internet.</p>
+    <a href="/blog/como-evitar-estafas-trabajo-remoto-latam/" class="btn btn-accent">Ver guía de seguridad laboral</a>
+  </aside>
+
+  {% if relacionadas %}
+  <h2 class="section-title">Otras vacantes que podrían interesarte</h2>
+  <div class="job-list">
+    {% for r in relacionadas %}
+    <article class="job-card">
+      <h3 class="job-title"><a href="/empleos/{{ r.slug }}/">{{ r.titulo }}</a></h3>
+      <p class="job-company">{{ r.empresa }} · {{ r.idioma }}</p>
+      <a href="/empleos/{{ r.slug }}/">Ver vacante →</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
