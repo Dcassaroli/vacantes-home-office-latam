@@ -289,8 +289,12 @@ def main():
     robots_txt = f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n"
     write_page("robots.txt", robots_txt)
 
+    # 9. Archivo de verificacion de Google Search Console
+    write_page("googlea25b83810ea4f0df.html", "google-site-verification: googlea25b83810ea4f0df.html")
+
     print(f"Sitio generado correctamente en {DIST_DIR} ({len(vacantes)} vacantes activas, {len(articulos)} articulos, {len(urls_sitemap)} URLs en sitemap).")
 
 
 if __name__ == "__main__":
     main()
+
