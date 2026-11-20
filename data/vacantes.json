@@ -1,16 +1,70 @@
-﻿[
+[
+  {
+    "slug": "agente-de-ventas-medio-tiempo-x-plora-marketing",
+    "titulo": "Agente de Ventas (Medio Tiempo)",
+    "empresa": "X-Plora Marketing",
+    "paises": [
+      "M?xico"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Español nativo",
+    "experiencia": "Sin experiencia previa",
+    "salario": "$9,500 a $15,000 MXN/mes ($12,000 base sujeto a cuota + hasta 30% comisi?n)",
+    "horario": "Medio tiempo (Lunes a viernes, 10:00 a.m. a 2:00 p.m.)",
+    "tipo_contratacion": "Medio tiempo",
+    "categorias": [
+      "sin-experiencia",
+      "espanol",
+      "estudiantes"
+    ],
+    "destacada": false,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "",
+    "enlace_aplicacion": "https://mx.indeed.com/viewjob?jk=b051f402b9e7ca38",
+    "resumen": "Venta remota de servicios de marketing integral (redes sociales, sitios web y ciberseguridad). Nota: el sueldo base de $12,000 MXN est? condicionado al cumplimiento de cuota mensual; de lo contrario, el pago es solo por comisiones.",
+    "funciones": [
+      "Prospecci?n y cierre de clientes para servicios de marketing digital, sitios web y ciberseguridad",
+      "Negociaci?n comercial y seguimiento a prospectos de manera remota",
+      "Cumplimiento de cuota mensual de ventas"
+    ],
+    "requisitos": [
+      "Edad legal para trabajar",
+      "Facilidad de palabra, comunicaci?n activa y orientaci?n a metas",
+      "Manejo de redes sociales y correo electr?nico",
+      "No se requiere amplia experiencia previa"
+    ],
+    "beneficios": [
+      "Modalidad 100% remota (Home Office)",
+      "Media jornada: lunes a viernes de 10:00 a.m. a 2:00 p.m.",
+      "Esquema de comisiones de hasta el 30% por cliente cerrado",
+      "Capacitaci?n incluida y horarios flexibles"
+    ]
+  },
   {
     "slug": "tutor-conversacional-espanol-online-preply",
     "titulo": "Tutor Conversacional de Español Online (Sin Título Requerido)",
     "empresa": "Preply (Plataforma Global de Tutoría)",
-    "paises": ["México", "Colombia", "Argentina", "Chile", "Perú", "Toda LATAM"],
+    "paises": [
+      "México",
+      "Colombia",
+      "Argentina",
+      "Chile",
+      "Perú",
+      "Toda LATAM"
+    ],
     "modalidad": "100% Remoto (Home Office)",
     "idioma": "Español nativo (Inglés conversacional B1/C1 es un plus)",
     "experiencia": "Sin experiencia previa",
     "salario": "$6.00 – $15.00 USD por hora (tarifa definida por el tutor)",
     "horario": "Flexible (tú eliges tus bloques horarios disponibles)",
     "tipo_contratacion": "Freelance / Independiente",
-    "categorias": ["sin-experiencia", "espanol", "bilingues", "freelance"],
+    "categorias": [
+      "sin-experiencia",
+      "espanol",
+      "bilingues",
+      "freelance"
+    ],
     "destacada": true,
     "verificada": true,
     "fecha_publicacion": "2026-11-19",
