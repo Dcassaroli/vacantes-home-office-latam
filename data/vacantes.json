@@ -1,5 +1,321 @@
 [
   {
+    "slug": "call-center-agent-ii-mexico-healthedge",
+    "titulo": "Call Center Agent II (México)",
+    "empresa": "HealthEdge",
+    "paises": [
+      "México"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Inglés avanzado / Español (deseable)",
+    "experiencia": "2+ años en Call Center / Atención a clientes",
+    "salario": "Prestaciones + Bono de $4,600 MXN al finalizar contrato",
+    "horario": "Lunes a Domingo (turnos entre 8:00 AM y 6:00 PM hora CDMX, con descanso entre semana)",
+    "tipo_contratacion": "Contrato temporal (8 dic 2026 - 8 feb 2027) - Tiempo completo",
+    "categorias": [
+      "bilingues",
+      "call-center",
+      "atencion-al-cliente",
+      "internacionales"
+    ],
+    "destacada": true,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "2026-12-08",
+    "enlace_aplicacion": "https://mx.indeed.com/viewjob?jk=9485849e5d8207bd",
+    "resumen": "Atiende llamadas entrantes y salientes de soporte en el sector salud/aseguradoras para HealthEdge desde casa en México, con prestaciones y bono de $4,600 MXN al concluir el contrato.",
+    "funciones": [
+      "Atender y dar seguimiento a llamadas entrantes y salientes de asistencia al cliente.",
+      "Documentar cada llamada en los sistemas internos de tickets y seguimiento.",
+      "Servir de enlace entre el departamento de reclamaciones y proveedores de salud.",
+      "Investigar reclamos de clientes en los sistemas principales de pago dentro de los tiempos establecidos."
+    ],
+    "requisitos": [
+      "Residir en México y contar con nacionalidad mexicana.",
+      "Bachillerato / preparatoria concluida.",
+      "2 a 3+ años de experiencia en entorno de Call Center (preferente en sector salud).",
+      "Dominio de Microsoft Office (especialmente Word y Excel) y excelente comunicación verbal y escrita."
+    ],
+    "beneficios": [
+      "Trabajo 100% remoto dentro de México.",
+      "Prestaciones de ley durante el contrato.",
+      "Bono de $4,600 MXN pagado al completar exitosamente el contrato.",
+      "Capacitación pagada del 8 al 28 de diciembre de 2026."
+    ]
+  },
+  {
+    "slug": "customer-service-representative-omnie",
+    "titulo": "Customer Service Representative (Teléfono, Chat y Correo)",
+    "empresa": "Omnie",
+    "paises": [
+      "México",
+      "Toda LATAM"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Inglés avanzado (B2/C1)",
+    "experiencia": "3+ años en atención al cliente / e-commerce",
+    "salario": "$4.00 – $6.00 USD por hora",
+    "horario": "Lunes a Viernes (5:00 AM - 2:00 PM PST o 8:00 AM - 5:00 PM PST)",
+    "tipo_contratacion": "Tiempo completo",
+    "categorias": [
+      "bilingues",
+      "atencion-al-cliente",
+      "chat-asistencia-virtual",
+      "internacionales"
+    ],
+    "destacada": true,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "",
+    "enlace_aplicacion": "https://mx.indeed.com/viewjob?jk=ca1d4bc025cda04f",
+    "resumen": "Brinda soporte de primer nivel por teléfono, chat en vivo y correo electrónico gestionando pedidos, suscripciones y pagos en Shopify para consumidores internacionales.",
+    "funciones": [
+      "Resolver dudas de clientes sobre estatus de pedidos, cambios, envíos, devoluciones y reembolsos.",
+      "Gestionar pausas, cambios o cancelaciones de suscripciones y pagos fallidos.",
+      "Utilizar Shopify y herramientas de e-commerce para revisar cuentas y facturación.",
+      "Documentar cada interacción en el CRM y escalar casos complejos a asesores senior."
+    ],
+    "requisitos": [
+      "3+ años de experiencia en servicio al cliente o contact center (preferente en e-commerce o suscripciones).",
+      "Sólida experiencia manejando Shopify y herramientas de tickets/CRM.",
+      "Preparatoria concluida, equipo propio (preferente doble monitor) e internet estable.",
+      "Incluir enlace a una nota de voz de presentación de 1 minuto en inglés al postularte."
+    ],
+    "beneficios": [
+      "Pago en dólares ($4 a $6 USD/hora según experiencia).",
+      "Horario fijo de lunes a viernes con fines de semana libres.",
+      "Modalidad 100% remota desde casa."
+    ]
+  },
+  {
+    "slug": "bilingual-administrative-assistant-solvo-global",
+    "titulo": "Bilingual Administrative Assistant",
+    "empresa": "Solvo Global SAS",
+    "paises": [
+      "México"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Inglés avanzado (C1)",
+    "experiencia": "1+ año en asistencia administrativa o soporte operativo",
+    "salario": "Competitivo (a tratar en entrevista)",
+    "horario": "Lunes a Viernes | 8:30 AM - 5:30 PM EST (Fines de semana libres)",
+    "tipo_contratacion": "Tiempo completo (Prestación de servicios)",
+    "categorias": [
+      "bilingues",
+      "chat-asistencia-virtual",
+      "internacionales"
+    ],
+    "destacada": false,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "",
+    "enlace_aplicacion": "https://mx.indeed.com/viewjob?jk=dffa3c25b989b64a",
+    "resumen": "Apoya las operaciones diarias de una firma profesional brindando soporte administrativo, seguimiento a clientes, gestión de correos y control documental desde México.",
+    "funciones": [
+      "Atención y seguimiento de llamadas, correos electrónicos y recordatorios de citas.",
+      "Elaboración y gestión de documentos, cartas y comunicaciones administrativas.",
+      "Registro y seguimiento de información de pagos y expedientes de clientes.",
+      "Coordinación operativa continua con el equipo interno."
+    ],
+    "requisitos": [
+      "Residir en México con nivel de inglés avanzado.",
+      "Mínimo 1 año de experiencia en asistencia administrativa o atención al cliente (preferente en entornos legales).",
+      "Manejo de Microsoft Office y herramientas digitales de organización.",
+      "Alta atención al detalle, discreción y confidencialidad."
+    ],
+    "beneficios": [
+      "Trabajo 100% remoto en México.",
+      "Fines de semana libres (jornada de lunes a viernes).",
+      "Contratación estable por tiempo indeterminado."
+    ]
+  },
+  {
+    "slug": "part-time-remote-operations-assistant-la-photo-booth",
+    "titulo": "Part-Time Remote Operations Assistant (Scheduling & Photoshop)",
+    "empresa": "LA Photo Booth Rentals",
+    "paises": [
+      "México"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Inglés fluido (oral y escrito)",
+    "experiencia": "Experiencia en soporte administrativo y Adobe Photoshop",
+    "salario": "$6.00 USD por hora (~$111 MXN/hr) + $5 USD por cada venta adicional",
+    "horario": "Medio tiempo (~20 hrs/semana) | Lunes a Viernes, 8:00 AM - 12:00 PM PST",
+    "tipo_contratacion": "Medio tiempo (Part-Time)",
+    "categorias": [
+      "bilingues",
+      "chat-asistencia-virtual",
+      "freelance",
+      "estudiantes",
+      "internacionales"
+    ],
+    "destacada": true,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "",
+    "enlace_aplicacion": "https://mx.indeed.com/viewjob?jk=ed0c9024e05370bf",
+    "resumen": "Vacante de medio tiempo desde México para coordinar agendas de eventos y personalizar plantillas gráficas en Adobe Photoshop para empresa de eventos en Los Ángeles.",
+    "funciones": [
+      "Confirmar horarios de eventos, accesos y contactos con clientes por correo, mensaje o llamada.",
+      "Personalizar plantillas de tiras fotográficas en Adobe Photoshop (nombres, fechas, logotipos y exportación final).",
+      "Elaborar itinerarios para el personal de eventos y detectar conflictos de agenda a tiempo.",
+      "Dar seguimiento a saldos pendientes y ofrecer mejoras opcionales a clientes ya reservados."
+    ],
+    "requisitos": [
+      "Residir en México con inglés claro tanto escrito como hablado.",
+      "Conocimiento práctico de Adobe Photoshop (edición de capas, texto y exportación).",
+      "Experiencia en soporte administrativo, coordinación o atención al cliente.",
+      "Postularse enviando CV en inglés indicando ciudad, disponibilidad y ejemplo de edición en Photoshop."
+    ],
+    "beneficios": [
+      "Pago base de $6 USD por hora (incluyendo capacitación pagada) más comisiones de $5 USD por upgrade vendido.",
+      "Horario matutino de medio tiempo (20 horas a la semana, lunes a viernes).",
+      "Posibilidad de horas extra pagadas en temporada alta (diciembre)."
+    ]
+  },
+  {
+    "slug": "executive-assistant-empresa-eeuu-latam",
+    "titulo": "Executive Assistant (Empresa de EE.UU.)",
+    "empresa": "Empresa de EE.UU. (Confidencial)",
+    "paises": [
+      "México",
+      "Argentina",
+      "Brasil",
+      "Chile",
+      "Colombia",
+      "Costa Rica",
+      "Paraguay",
+      "Perú",
+      "Uruguay"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Inglés avanzado (C1)",
+    "experiencia": "1+ año asistiendo a ejecutivos / dirección",
+    "salario": "$2,000 – $2,500 USD mensuales",
+    "horario": "Tiempo completo (40 hrs/semana) en horario Eastern Time (EE.UU.)",
+    "tipo_contratacion": "Contrato temporal de 6 meses (Tiempo completo)",
+    "categorias": [
+      "bilingues",
+      "chat-asistencia-virtual",
+      "internacionales"
+    ],
+    "destacada": true,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "",
+    "enlace_aplicacion": "https://lnkd.in/e9Saxrf5",
+    "resumen": "Asiste directamente a ejecutivos de una empresa estadounidense gestionando agendas, viajes corporativos y proyectos clave de forma 100% remota desde Latinoamérica.",
+    "funciones": [
+      "Gestión integral de calendarios ejecutivos y coordinación de reuniones internacionales.",
+      "Organización de viajes corporativos y reportes de gastos mediante Navan o Concur.",
+      "Elaboración de presentaciones y documentos en Microsoft 365 (Outlook, Word, PowerPoint, Teams, SharePoint).",
+      "Coordinación de proyectos transversales y manejo confidencial de información directiva."
+    ],
+    "requisitos": [
+      "Residir en México, Argentina, Brasil, Chile, Colombia, Costa Rica, Paraguay, Perú o Uruguay.",
+      "Inglés avanzado (C1) oral y escrito indispensable.",
+      "1+ año de experiencia brindando soporte administrativo a múltiples ejecutivos.",
+      "Dominio de suite Microsoft 365 y disponibilidad en horario Eastern Time (EST)."
+    ],
+    "beneficios": [
+      "Excelente remuneración de $2,000 a $2,500 USD mensuales.",
+      "Trabajo 100% remoto desde casa.",
+      "Experiencia directa con alta dirección en entorno internacional."
+    ]
+  },
+  {
+    "slug": "latam-sales-trainer-igaming",
+    "titulo": "LATAM Sales Trainer – iGaming",
+    "empresa": "Empresa Internacional iGaming",
+    "paises": [
+      "México",
+      "Colombia",
+      "Argentina",
+      "Chile",
+      "Perú",
+      "Toda LATAM"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Español / Inglés (deseable)",
+    "experiencia": "Experiencia en ventas y capacitación comercial",
+    "salario": "Competitivo (a tratar en entrevista)",
+    "horario": "Tiempo completo",
+    "tipo_contratacion": "Tiempo completo",
+    "categorias": [
+      "internacionales",
+      "bilingues",
+      "freelance"
+    ],
+    "destacada": false,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "",
+    "enlace_aplicacion": "https://lnkd.in/dZvVSP5d",
+    "resumen": "Capacita y desarrolla equipos comerciales en toda Latinoamérica dentro del sector iGaming y entretenimiento digital en modalidad 100% remota.",
+    "funciones": [
+      "Diseñar e impartir programas de capacitación comercial para equipos de ventas en LATAM.",
+      "Dar seguimiento al desempeño y métricas de conversión de los agentes capacitados.",
+      "Actualizar guiones, objeciones y mejores prácticas de cierre comercial.",
+      "Colaborar con líderes regionales para acelerar la curva de aprendizaje de nuevos ingresos."
+    ],
+    "requisitos": [
+      "Residir en Latinoamérica con excelente conexión a internet.",
+      "Experiencia comprobable en ventas B2C/B2B y formación de equipos comerciales.",
+      "Conocimiento o afinidad con el sector iGaming / entretenimiento digital.",
+      "Habilidades sobresalientes de comunicación, liderazgo y presentación remota."
+    ],
+    "beneficios": [
+      "Modalidad 100% remota para toda Latinoamérica.",
+      "Proyección internacional dentro de una industria en rápida expansión."
+    ]
+  },
+  {
+    "slug": "closer-ejecutivo-ventas-caribbean-region",
+    "titulo": "Closer / Ejecutivo(a) de Ventas – Caribbean Region",
+    "empresa": "Empresa Internacional de Entretenimiento Digital",
+    "paises": [
+      "Trinidad y Tobago",
+      "Guyana",
+      "Jamaica",
+      "Santa Lucía",
+      "Surinam",
+      "Bahamas"
+    ],
+    "modalidad": "100% Remoto (Home Office)",
+    "idioma": "Español / Inglés comercial",
+    "experiencia": "2+ años en ventas B2C, closing o gestión comercial",
+    "salario": "Remuneración fija mensual + bonos por KPIs",
+    "horario": "Tiempo completo",
+    "tipo_contratacion": "Tiempo completo",
+    "categorias": [
+      "internacionales",
+      "bilingues"
+    ],
+    "destacada": false,
+    "verificada": true,
+    "fecha_publicacion": "2026-11-20",
+    "fecha_limite": "",
+    "enlace_aplicacion": "https://lnkd.in/dBA4Yeh9",
+    "resumen": "Gestiona el ciclo completo de ventas, negociación y cierre comercial con clientes y partners del Caribe para empresa internacional de entretenimiento digital.",
+    "funciones": [
+      "Gestionar relaciones comerciales con clientes y socios estratégicos de la región Caribe.",
+      "Identificar oportunidades de negocio, coordinar reuniones y liderar negociaciones.",
+      "Conducir el ciclo completo de ventas desde el primer contacto hasta el cierre.",
+      "Trabajar con equipos internacionales en proyectos de expansión regional."
+    ],
+    "requisitos": [
+      "Residencia obligatoria en Trinidad y Tobago, Guyana, Jamaica, Santa Lucía, Surinam o Bahamas.",
+      "2+ años de experiencia en ventas B2C, closing o gestión comercial.",
+      "Excelentes habilidades de negociación, cierre y orientación a resultados.",
+      "Autonomía y capacidad para trabajar de forma 100% remota."
+    ],
+    "beneficios": [
+      "Sueldo fijo mensual más esquema de bonos por cumplimiento de KPIs.",
+      "Trabajo 100% remoto en entorno multicultural.",
+      "Oportunidades reales de crecimiento profesional."
+    ]
+  },
+  {
     "titulo": "Recruiting Assistant – Remoto (LATAM)",
     "empresa": "High Light Electric (Mendoza Companies)",
     "paises": [
