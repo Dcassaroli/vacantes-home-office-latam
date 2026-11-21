@@ -1,10 +1,9 @@
 ﻿import json
-from datetime import date
 
-with open("data/vacantes.json", "r", encoding="utf-8") as f:
+with open("data/vacantes.json", "r", encoding="utf-8-sig") as f:
     actuales = json.load(f)
 
-with open("lote_vacantes.json", "r", encoding="utf-8") as f:
+with open("lote_vacantes.json", "r", encoding="utf-8-sig") as f:
     nuevas = json.load(f)
 
 slugs = {v.get("slug") for v in actuales}
