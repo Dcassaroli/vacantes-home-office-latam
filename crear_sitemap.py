@@ -1,14 +1,14 @@
-﻿import json
+import json
 import os
 from datetime import date
 
 base_url = "https://vacantes-home-office-latam.pages.dev"
 hoy = date.today().isoformat()
 
-with open("data/vacantes.json", "r", encoding="utf-8") as f:
+with open("data/vacantes.json", "r", encoding="utf-8-sig") as f:
     vacantes = json.load(f)
 
-with open("data/articulos.json", "r", encoding="utf-8") as f:
+with open("data/articulos.json", "r", encoding="utf-8-sig") as f:
     articulos = json.load(f)
 
 urls = [
@@ -25,10 +25,10 @@ for a in articulos:
     if slug:
         urls.append(f"  <url><loc>{base_url}/articulo/{slug}.html</loc><lastmod>{hoy}</lastmod><priority>0.7</priority></url>")
 
-xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(urls) + '\n</urlset>'
+xml_content = '<?xml version="1.0" encoding="utf-8-sig"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(urls) + '\n</urlset>'
 
 carpeta_salida = "dist" if os.path.exists("dist") else ("public" if os.path.exists("public") else ".")
-with open(os.path.join(carpeta_salida, "sitemap.xml"), "w", encoding="utf-8") as f:
+with open(os.path.join(carpeta_salida, "sitemap.xml"), "w", encoding="utf-8-sig") as f:
     f.write(xml_content)
 
 print(f"sitemap.xml generado con {len(urls)} URLs en {carpeta_salida}/sitemap.xml")
