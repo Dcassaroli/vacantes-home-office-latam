@@ -292,6 +292,14 @@ def main():
     # 9. Archivo de verificacion de Google Search Console
     write_page("googlea25b83810ea4f0df.html", "google-site-verification: googlea25b83810ea4f0df.html")
 
+    # 10. Redirecciones para enlaces antiguos con /vacantes/
+    redirects_txt = "\n".join([
+        "/vacantes/social-media-assistant-mexico-wing-assistant.html /empleos/social-media-assistant-mexico-wing-assistant/ 301",
+        "/vacantes/* /empleos/:splat 301",
+        "/vacantes /empleos/ 301",
+    ]) + "\n"
+    write_page("_redirects", redirects_txt)
+
     print(f"Sitio generado correctamente en {DIST_DIR} ({len(vacantes)} vacantes activas, {len(articulos)} articulos, {len(urls_sitemap)} URLs en sitemap).")
 
 
