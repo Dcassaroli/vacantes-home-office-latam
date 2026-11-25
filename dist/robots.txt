@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vacantes-home-office-latam.pages.dev/sitemap.xml

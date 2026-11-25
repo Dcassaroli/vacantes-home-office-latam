@@ -1,4 +1,4 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% block extra_head %}
 {% if job_schema %}
 <script type="application/ld+json">
@@ -55,18 +55,15 @@
       <li>{{ item }}</li>
       {% endfor %}
     </ul>
-<h2>Beneficios</h2>
+
+    <h2>Beneficios</h2>
     <ul>
       {% for item in v.beneficios %}
       <li>{{ item }}</li>
       {% endfor %}
     </ul>
 
-    <div style="margin: 28px 0;">
-      <script async="async" data-cfasync="false" src="https://bauval.org/21/20fd915db43d55e071e87d5b1aacb7de"></script>
-      <div id="container-20fd915db43d55e071e87d5b1aacb7de"></div>
-    </div>
-
+    <div style="margin: 28px 0;"><script async="async" data-cfasync="false" src="https://bauval.org/21/20fd915db43d55e071e87d5b1aacb7de"></script><div id="container-20fd915db43d55e071e87d5b1aacb7de"></div></div>
     <div style="margin: 28px 0 12px;">
       <a href="{{ v.enlace_aplicacion }}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 24px;">Postularme directamente en el sitio oficial ↗</a>
     </div>
@@ -74,9 +71,15 @@
   </article>
 
   <aside class="promo-box">
-    <h3>Mejora tus posibilidades antes de postularte</h3>
-    <p>Aprende cómo estructurar tu currículum para pasar filtros automáticos y evitar estafas laborales en internet.</p>
-    <a href="/blog/como-evitar-estafas-trabajo-remoto-latam/" class="btn btn-accent">Ver guía de seguridad laboral</a>
+    {% if 'ingl' in v.idioma|lower or 'biling' in v.idioma|lower or 'b2' in v.idioma|lower or 'c1' in v.idioma|lower %}
+    <h3>¿Quieres asegurar esta vacante bilingüe?</h3>
+    <p>Refuerza tu nivel con esta <strong>Diplomatura gratuita en Inglés Nivel C1</strong> en Alison y destaca frente a otros candidatos remotos.</p>
+    <a href="https://alison.com/es/curso/diplomatura-en-ingles-nivel-c1?utm_source=alison_user&utm_medium=affiliate&utm_campaign=61903151" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-accent">Tomar curso de Inglés C1 gratis ↗</a>
+    {% else %}
+    <h3>Destaca tu perfil para trabajos remotos</h3>
+    <p>Domina las herramientas que más piden las empresas con este curso gratuito de <strong>Fórmulas y Funciones de Microsoft Excel</strong> en Alison.</p>
+    <a href="https://alison.com/es/curso/formulas-y-funciones-de-microsoft-excel?utm_source=alison_user&utm_medium=affiliate&utm_campaign=61903151" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-accent">Tomar curso de Excel gratis ↗</a>
+    {% endif %}
   </aside>
 
   {% if relacionadas %}
@@ -95,30 +98,3 @@
 {% endblock %}
 
 {% block ad_footer %}{% endblock %}
-S
-    <div style="margin: 28px 0 12px;">
-      <a href="{{ v.enlace_aplicacion }}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 24px;">Postularme directamente en el sitio oficial ↗</a>
-    </div>
-    <p style="font-size: 0.85rem; color: #64748b;">Aviso de seguridad: Nunca pagues dinero ni envíes datos bancarios para aplicar a un empleo. Si detectas un enlace roto o sospechoso, <a href="/contacto/">repórtalo aquí</a>.</p>
-  </article>
-
-  <aside class="promo-box">
-    <h3>Mejora tus posibilidades antes de postularte</h3>
-    <p>Aprende cómo estructurar tu currículum para pasar filtros automáticos y evitar estafas laborales en internet.</p>
-    <a href="/blog/como-evitar-estafas-trabajo-remoto-latam/" class="btn btn-accent">Ver guía de seguridad laboral</a>
-  </aside>
-
-  {% if relacionadas %}
-  <h2 class="section-title">Otras vacantes que podrían interesarte</h2>
-  <div class="job-list">
-    {% for r in relacionadas %}
-    <article class="job-card">
-      <h3 class="job-title"><a href="/empleos/{{ r.slug }}/">{{ r.titulo }}</a></h3>
-      <p class="job-company">{{ r.empresa }} · {{ r.idioma }}</p>
-      <a href="/empleos/{{ r.slug }}/">Ver vacante →</a>
-    </article>
-    {% endfor %}
-  </div>
-  {% endif %}
-</div>
-{% endblock %}
