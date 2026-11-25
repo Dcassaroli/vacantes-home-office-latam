@@ -1,0 +1,243 @@
+=== BASE.HTML === 
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ meta_title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <link rel="canonical" href="{{ site_url }}{{ canonical_path }}">
+  <meta property="og:title" content="{{ meta_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:type" content="{{ og_type | default('website') }}">
+  <meta property="og:url" content="{{ site_url }}{{ canonical_path }}">
+  <link rel="stylesheet" href="/static/style.css">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-wrap">
+      <div class="container header-inner">
+        <a href="/" class="brand">💼 Vacantes Home Office LATAM</a>
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menú</button>
+      </div>
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/empleos/">Empleos</a>
+        <a href="/categoria/sin-experiencia/">Sin experiencia</a>
+        <a href="/categoria/espanol/">Solo español</a>
+        <a href="/categoria/bilingues/">Bilingües</a>
+        <a href="/categoria/freelance/">Freelance</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+    {% block ad_footer %}
+    <div style="max-width: 960px; margin: 2rem auto 3rem auto; padding: 0 1rem;">
+      <script async="async" data-cfasync="false" src="https://bauval.org/21/20fd915db43d55e071e87d5b1aacb7de"></script>
+      <div id="container-20fd915db43d55e071e87d5b1aacb7de"></div>
+    </div>
+    {% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Vacantes Home Office Reales LATAM</h4>
+          <p>Portal independiente de empleos remotos y orientación laboral para México y toda Latinoamérica. Difundimos ofertas verificables y guías prácticas para trabajar desde casa.</p>
+        </div>
+        <div>
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="/empleos/">Todas las vacantes</a></li>
+            <li><a href="/categoria/sin-experiencia/">Sin experiencia</a></li>
+            <li><a href="/categoria/espanol/">Solo español</a></li>
+            <li><a href="/categoria/bilingues/">Bilingües</a></li>
+            <li><a href="/blog/">Blog y guías</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Información legal</h4>
+          <ul>
+            <li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
+            <li><a href="/contacto/">Contacto</a></li>
+            <li><a href="/politica-de-privacidad/">Política de privacidad</a></li>
+            <li><a href="/aviso-legal/">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{ year }} Vacantes Home Office Reales LATAM. Todos los derechos reservados. No cobramos por postularte a ninguna vacante.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
+ 
+=== VACANTE.HTML === 
+﻿{% extends "base.html" %}
+{% block extra_head %}
+{% if job_schema %}
+<script type="application/ld+json">
+{{ job_schema | safe }}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a> › <a href="/empleos/">Empleos</a> › <span>{{ v.titulo }}</span>
+  </nav>
+
+  <article class="content-card prose">
+    <div class="badges">
+      {% if v.verificada %}
+      <span class="badge badge-verified">✔ Oferta verificada</span>
+      {% else %}
+      <span class="badge badge-pending">⏳ Pendiente de confirmación</span>
+      {% endif %}
+      {% if v.destacada %}
+      <span class="badge badge-featured">★ Destacada</span>
+      {% endif %}
+    </div>
+
+    <h1>{{ v.titulo }}</h1>
+    <p class="job-company" style="font-size: 1.05rem; margin-top: 4px;">{{ v.empresa }}</p>
+
+    <div class="detail-grid">
+      <div class="detail-item"><strong>Países permitidos</strong>{{ v.paises | join(', ') }}</div>
+      <div class="detail-item"><strong>Modalidad</strong>{{ v.modalidad }}</div>
+      <div class="detail-item"><strong>Idioma requerido</strong>{{ v.idioma }}</div>
+      <div class="detail-item"><strong>Experiencia</strong>{{ v.experiencia }}</div>
+      <div class="detail-item"><strong>Salario</strong>{{ v.salario if v.salario else 'No especificado por la empresa' }}</div>
+      <div class="detail-item"><strong>Horario</strong>{{ v.horario }}</div>
+      <div class="detail-item"><strong>Tipo de contratación</strong>{{ v.tipo_contratacion }}</div>
+      <div class="detail-item"><strong>Fecha de publicación</strong>{{ v.fecha_publicacion }}{% if v.fecha_limite %} (Límite: {{ v.fecha_limite }}){% endif %}</div>
+    </div>
+
+    <h2>Descripción del puesto</h2>
+    <p>{{ v.resumen }}</p>
+
+    <h2>Funciones principales</h2>
+    <ul>
+      {% for item in v.funciones %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Requisitos</h2>
+    <ul>
+      {% for item in v.requisitos %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+   <h2>Beneficios</h2>
+    <ul>
+      {% for item in v.beneficios %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <div style="margin: 28px 0;">
+      <script async="async" data-cfasync="false" src="https://bauval.org/21/20fd915db43d55e071e87d5b1aacb7de"></script>
+      <div id="container-20fd915db43d55e071e87d5b1aacb7de"></div>
+    </div>
+
+    <div style="margin: 28px 0 12px;">
+      <a href="{{ v.enlace_aplicacion }}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 24px;">Postularme directamente en el sitio oficial ↗</a>
+    </div>
+    <p style="font-size: 0.85rem; color: #64748b;">Aviso de seguridad: Nunca pagues dinero ni envíes datos bancarios para aplicar a un empleo. Si detectas un enlace roto o sospechoso, <a href="/contacto/">repórtalo aquí</a>.</p>
+  </article>
+
+  <aside class="promo-box">
+    <h3>Mejora tus posibilidades antes de postularte</h3>
+    <p>Aprende cómo estructurar tu currículum para pasar filtros automáticos y evitar estafas laborales en internet.</p>
+    <a href="/blog/como-evitar-estafas-trabajo-remoto-latam/" class="btn btn-accent">Ver guía de seguridad laboral</a>
+  </aside>
+
+  {% if relacionadas %}
+  <h2 class="section-title">Otras vacantes que podrían interesarte</h2>
+  <div class="job-list">
+    {% for r in relacionadas %}
+    <article class="job-card">
+      <h3 class="job-title"><a href="/empleos/{{ r.slug }}/">{{ r.titulo }}</a></h3>
+      <p class="job-company">{{ r.empresa }} · {{ r.idioma }}</p>
+      <a href="/empleos/{{ r.slug }}/">Ver vacante →</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block ad_footer %}{% endblock %}
+
+    <div style="margin: 28px 0 12px;">
+      <a href="{{ v.enlace_aplicacion }}" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 24px;">Postularme directamente en el sitio oficial ↗</a>
+    </div>
+    <p style="font-size: 0.85rem; color: #64748b;">Aviso de seguridad: Nunca pagues dinero ni envíes datos bancarios para aplicar a un empleo. Si detectas un enlace roto o sospechoso, <a href="/contacto/">repórtalo aquí</a>.</p>
+  </article>
+
+  <aside class="promo-box">
+    <h3>Mejora tus posibilidades antes de postularte</h3>
+    <p>Aprende cómo estructurar tu currículum para pasar filtros automáticos y evitar estafas laborales en internet.</p>
+    <a href="/blog/como-evitar-estafas-trabajo-remoto-latam/" class="btn btn-accent">Ver guía de seguridad laboral</a>
+  </aside>
+
+  {% if relacionadas %}
+  <h2 class="section-title">Otras vacantes que podrían interesarte</h2>
+  <div class="job-list">
+    {% for r in relacionadas %}
+    <article class="job-card">
+      <h3 class="job-title"><a href="/empleos/{{ r.slug }}/">{{ r.titulo }}</a></h3>
+      <p class="job-company">{{ r.empresa }} · {{ r.idioma }}</p>
+      <a href="/empleos/{{ r.slug }}/">Ver vacante →</a>
+    </article>
+    {% endfor %}
+  </div>S
+  {% endif %}
+</div>
+{% endblock %}
+ 
+=== ARTICULO.HTML === 
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a> › <a href="/blog/">Blog</a> › <span>{{ art.titulo }}</span>
+  </nav>
+
+  <article class="content-card prose">
+    <div class="badges">
+      <span class="badge badge-cat">{{ art.categoria }}</span>
+      <span class="badge badge-cat">📅 {{ art.fecha_publicacion }}</span>
+      <span class="badge badge-cat">⏱ Lectura de {{ art.lectura }}</span>
+    </div>
+    <h1>{{ art.titulo }}</h1>
+    <div style="margin-top: 18px;">
+      {{ art.contenido_html | safe }}
+    </div>
+
+    <div style="margin: 28px 0 8px;">
+      <script async="async" data-cfasync="false" src="https://bauval.org/21/20fd915db43d55e071e87d5b1aacb7de"></script>
+      <div id="container-20fd915db43d55e071e87d5b1aacb7de"></div>
+    </div>
+  </article>
+
+  <aside class="promo-box">
+    <h3>¿Buscando tu próximo empleo remoto?</h3>
+    <p>Explora las vacantes actualizadas para México y toda Latinoamérica.</p>
+    <a href="/empleos/" class="btn btn-primary">Ver vacantes disponibles</a>
+  </aside>
+</div>
+{% endblock %}
+
+{% block ad_footer %}{% endblock %}
