@@ -39,40 +39,19 @@
       <div id="container-20fd915db43d55e071e87d5b1aacb7de"></div>
     </div>
     {% endblock %}
-  </main>
-S
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Vacantes Home Office Reales LATAM</h4>
-          <p>Portal independiente de empleos remotos y orientación laboral para México y toda Latinoamérica. Difundimos ofertas verificables y guías prácticas para trabajar desde casa.</p>
-        </div>
-        <div>
-          <h4>Explorar</h4>
-          <ul>
-            <li><a href="/empleos/">Todas las vacantes</a></li>
-            <li><a href="/categoria/sin-experiencia/">Sin experiencia</a></li>
-            <li><a href="/categoria/espanol/">Solo español</a></li>
-            <li><a href="/categoria/bilingues/">Bilingües</a></li>
-            <li><a href="/blog/">Blog y guías</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Información legal</h4>
-          <ul>
-            <li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
-            <li><a href="/contacto/">Contacto</a></li>
-            <li><a href="/politica-de-privacidad/">Política de privacidad</a></li>
-            <li><a href="/aviso-legal/">Aviso legal</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© {{ year }} Vacantes Home Office Reales LATAM. Todos los derechos reservados. No cobramos por postularte a ninguna vacante.</p>
-      </div>
+ <main>
+    {% block content %}{% endblock %}
+    {% block ad_footer %}
+    <!-- Adsterra pausado temporalmente por redirecciones en móvil
+    <div style="max-width: 960px; margin: 2rem auto 3rem auto; padding: 0 1rem;">
+      <script async="async" data-cfasync="false" src="https://bauval.org/21/20fd915db43d55e071e87d5b1aacb7de"></script>
+      <div id="container-20fd915db43d55e071e87d5b1aacb7de"></div>
     </div>
-  </footer>
+    -->
+    {% endblock %}
+  </main>
+
+  <footer class="site-footer">
 
   <script src="/static/app.js" defer></script>
 </body>
