@@ -146,7 +146,7 @@ def main():
 
     raw_vacantes = load_json(DATA_DIR / "vacantes.json")
     vacantes = [v for v in raw_vacantes if is_active_job(v, today)]
-    vacantes.sort(key=lambda x: (x.get("destacada", False), x.get("fecha_publicacion", "")), reverse=True)
+    vacantes.sort(key=lambda x: (x.get("fecha_publicacion", ""), x.get("destacada", False)), reverse=True)
 
     articulos = load_json(DATA_DIR / "articulos.json")
     articulos.sort(key=lambda x: x.get("fecha_publicacion", ""), reverse=True)
